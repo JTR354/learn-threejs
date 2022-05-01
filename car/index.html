@@ -40,6 +40,7 @@
     </script>
   </head>
   <body style="cursor: url('null'), default">
+    <div id="process"></div>
     <div style="position: absolute; z-index: 2; color: #fff; display: flex">
       <p class="button-group">
         车身颜色：
@@ -253,6 +254,11 @@
           },
           function (xhr) {
             console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+            const process = document.querySelector('#process')
+            process.innerHTML = (xhr.loaded / xhr.total) * 100 + '% loaded'
+            if (xhr.loaded / xhr.total >= 1) {
+              process.innerHTML = 'hello world'
+            }
           },
           function (error) {
             console.log('An error happened')
