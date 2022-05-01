@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>car</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #bfe3dd;
+      }
+      #container {
+        width: 100%;
+        height: 100%;
+      }
+      .button-group > button:nth-child(1) {
+        background-color: #ffff00;
+        color: #333;
+      }
+      .button-group > button:nth-child(2) {
+        background-color: red;
+        color: #fff;
+      }
+      .button-group > button:nth-child(3) {
+        color: #fff;
+        background-color: #333;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vconsole@latest/dist/vconsole.min.js"></script>
+    <script>
+      // VConsole will be exported to `window.VConsole` by default.
+      var vConsole = new window.VConsole();
+    </script>
+    </script>
+  </head>
+  <body style="cursor: url('null'), default">
+    <div id="process"></div>
+    <div style="position: absolute; z-index: 2; color: #fff; display: flex">
+      <p class="button-group">
+        车身颜色：
+        <button onclick="changeCheshen(0)">黄色</button>
+        <button onclick="changeCheshen(1)">红色</button>
+        <button onclick="changeCheshen(2)">白色</button>
+      </p>
+    </div>
+    <div id="container"></div>
+  </body>
+</html>
